@@ -1,7 +1,6 @@
 import fs from 'fs';
 import type { ResponseLike } from '@ramensoft/handinger/internal/to-file';
 import { toFile } from '@ramensoft/handinger/core/uploads';
-import { File } from 'node:buffer';
 
 class MyClass {
   name: string = 'foo';
