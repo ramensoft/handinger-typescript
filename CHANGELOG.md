@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.11.0 (2026-06-03)
+
+Full Changelog: [v0.10.1...v0.11.0](https://github.com/ramensoft/handinger-typescript/compare/v0.10.1...v0.11.0)
+
+### Features
+
+* Refactor task chat to use WebSocket agent connection ([af5ba36](https://github.com/ramensoft/handinger-typescript/commit/af5ba36b2b87c803f96b93a50c19643c6364e88e))
+
 ## 0.10.1 (2026-05-19)
 
 Full Changelog: [v0.10.0...v0.10.1](https://github.com/ramensoft/handinger-typescript/compare/v0.10.0...v0.10.1)
