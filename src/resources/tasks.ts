@@ -12,10 +12,12 @@ import { path } from '../internal/utils/path';
  */
 export class Tasks extends APIResource {
   /**
-   * Run a new task against an existing worker. Send a `taskId` of a prior task to
-   * add a follow-up turn instead of starting a fresh task. Send
-   * `multipart/form-data` to attach files; the bytes are bootstrapped into the
-   * worker's workspace before the task starts.
+   * Run a new task against an existing worker and wait for the result. Send a
+   * `taskId` of a prior task to add a follow-up turn instead of starting a fresh
+   * task. Send `multipart/form-data` to attach files; the bytes are bootstrapped
+   * into the worker's workspace before the task starts. The task runs to completion
+   * on the server even if the connection drops; subscribe to task webhooks for
+   * long-running tasks.
    *
    * @example
    * ```ts
@@ -70,12 +72,6 @@ export interface CreateTask {
    * `standard`.
    */
   budget?: 'low' | 'standard' | 'high' | 'unlimited';
-
-  /**
-   * Stream the response as server-sent events instead of waiting for the final
-   * payload.
-   */
-  stream?: boolean;
 
   /**
    * Optional client-provided task id. Reuse this id to add turns to an existing
@@ -187,12 +183,6 @@ export interface TaskCreateParams {
    * `standard`.
    */
   budget?: 'low' | 'standard' | 'high' | 'unlimited';
-
-  /**
-   * Stream the response as server-sent events instead of waiting for the final
-   * payload.
-   */
-  stream?: boolean;
 
   /**
    * Optional client-provided task id. Reuse this id to add turns to an existing
