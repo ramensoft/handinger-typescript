@@ -25,7 +25,6 @@ describe('resource tasks', () => {
     const response = await client.tasks.create({
       input: "What's the weather today in Barcelona?",
       budget: 'standard',
-      stream: false,
       taskId: 'tsk_2Z-YWz3hFq6VlW',
       workerId: 'wrk_vk81XUHKHG-qr4',
     });
