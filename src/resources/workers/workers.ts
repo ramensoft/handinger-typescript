@@ -48,9 +48,8 @@ export class Workers extends APIResource {
   }
 
   /**
-   * Retrieve the current worker state and messages from its most recent task.
-   * Returns a JSON worker object by default, or a server-sent event stream when
-   * `stream=true`.
+   * Retrieve the current worker state and messages from its most recent task (or a
+   * specific task via `taskId`).
    *
    * @example
    * ```ts
@@ -341,11 +340,10 @@ export interface WorkerCreateParams {
 
 export interface WorkerRetrieveParams {
   /**
-   * Set to "true" to receive a server-sent event stream that replays all stored
-   * messages and then continues with live chunks from the active task (if any)
-   * before closing.
+   * Return the worker state and messages for a specific task instead of the most
+   * recent one.
    */
-  stream?: 'true' | 'false';
+  taskId?: string;
 }
 
 export interface WorkerUpdateParams {

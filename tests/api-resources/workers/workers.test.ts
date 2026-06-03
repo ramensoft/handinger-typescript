@@ -38,7 +38,7 @@ describe('resource workers', () => {
     await expect(
       client.workers.retrieve(
         't_org_123_w_01HZY2ZJQ8G7K42W2D7WF6V4GM',
-        { stream: 'true' },
+        { taskId: 'x' },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(Handinger.NotFoundError);
