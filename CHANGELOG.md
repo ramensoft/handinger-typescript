@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.11.1 (2026-06-17)
+
+Full Changelog: [v0.11.0...v0.11.1](https://github.com/ramensoft/handinger-typescript/compare/v0.11.0...v0.11.1)
+
+### Bug Fixes
+
+* **client:** send content-type header for requests with an omitted optional body ([c04ce9a](https://github.com/ramensoft/handinger-typescript/commit/c04ce9a4cb5846e449cf7054881b92fb883c7a55))
+
 ## 0.11.0 (2026-06-03)
 
 Full Changelog: [v0.10.1...v0.11.0](https://github.com/ramensoft/handinger-typescript/compare/v0.10.1...v0.11.0)
