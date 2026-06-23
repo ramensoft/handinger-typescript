@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.12.0 (2026-06-23)
+
+Full Changelog: [v0.11.1...v0.12.0](https://github.com/ramensoft/handinger-typescript/compare/v0.11.1...v0.12.0)
+
+### Features
+
+* **api:** add files field to Turn in tasks ([8ef9db7](https://github.com/ramensoft/handinger-typescript/commit/8ef9db7262fae7531fc3d168557266024e4ad3f4))
+
 ## 0.11.1 (2026-06-17)
 
 Full Changelog: [v0.11.0...v0.11.1](https://github.com/ramensoft/handinger-typescript/compare/v0.11.0...v0.11.1)
