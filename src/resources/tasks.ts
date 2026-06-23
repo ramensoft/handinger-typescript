@@ -149,6 +149,11 @@ export namespace TaskWithTurns {
 
     durationMs: number;
 
+    /**
+     * Files published by this turn.
+     */
+    files: Array<Turn.File>;
+
     input: string;
 
     inputTokens: number;
@@ -172,6 +177,18 @@ export namespace TaskWithTurns {
     structuredOutput: { [key: string]: unknown } | null;
 
     taskId: string;
+  }
+
+  export namespace Turn {
+    export interface File {
+      filename: string | null;
+
+      mediaType: string;
+
+      url: string;
+
+      size?: number;
+    }
   }
 }
 
