@@ -128,6 +128,8 @@ export namespace WorkerSchedule {
 export interface ScheduleListResponse {
   schedules: Array<WorkerSchedule>;
 
+  timezone: string;
+
   workerId: string;
 }
 
