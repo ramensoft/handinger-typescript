@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.13.0 (2026-07-10)
+
+Full Changelog: [v0.12.1...v0.13.0](https://github.com/ramensoft/handinger-typescript/compare/v0.12.1...v0.13.0)
+
+### Features
+
+* **api:** add timezone field to schedules list response ([883deca](https://github.com/ramensoft/handinger-typescript/commit/883deca860f12920fecc7c980869e723f7ca098f))
+
 ## 0.12.1 (2026-07-10)
 
 Full Changelog: [v0.12.0...v0.12.1](https://github.com/ramensoft/handinger-typescript/compare/v0.12.0...v0.12.1)
