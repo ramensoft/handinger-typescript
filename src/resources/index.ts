@@ -5,7 +5,9 @@ export {
   type CreateTask,
   type DeleteTaskResponse,
   type Task,
-  type TaskWithTurns,
+  type TaskTurnList,
+  type Turn,
+  type TaskRetrieveResponse,
   type TaskCreateParams,
 } from './tasks';
 export {
