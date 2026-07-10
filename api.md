@@ -55,10 +55,13 @@ Types:
 - <code><a href="./src/resources/tasks.ts">CreateTask</a></code>
 - <code><a href="./src/resources/tasks.ts">DeleteTaskResponse</a></code>
 - <code><a href="./src/resources/tasks.ts">Task</a></code>
-- <code><a href="./src/resources/tasks.ts">TaskWithTurns</a></code>
+- <code><a href="./src/resources/tasks.ts">TaskTurnList</a></code>
+- <code><a href="./src/resources/tasks.ts">Turn</a></code>
+- <code><a href="./src/resources/tasks.ts">TaskRetrieveResponse</a></code>
 
 Methods:
 
 - <code title="post /api/tasks">client.tasks.<a href="./src/resources/tasks.ts">create</a>({ ...params }) -> Worker</code>
-- <code title="get /api/tasks/{taskId}">client.tasks.<a href="./src/resources/tasks.ts">retrieve</a>(taskID) -> TaskWithTurns</code>
+- <code title="get /api/tasks/{taskId}">client.tasks.<a href="./src/resources/tasks.ts">retrieve</a>(taskID) -> TaskRetrieveResponse</code>
 - <code title="delete /api/tasks/{taskId}">client.tasks.<a href="./src/resources/tasks.ts">delete</a>(taskID) -> DeleteTaskResponse</code>
+- <code title="get /api/tasks/{taskId}/turns">client.tasks.<a href="./src/resources/tasks.ts">listTurns</a>(taskID) -> TaskTurnList</code>
