@@ -22,8 +22,10 @@ import {
   DeleteTaskResponse,
   Task,
   TaskCreateParams,
-  TaskWithTurns,
+  TaskRetrieveResponse,
+  TaskTurnList,
   Tasks,
+  Turn,
 } from './resources/tasks';
 import {
   CreateWorker,
@@ -791,7 +793,9 @@ export declare namespace Handinger {
     type CreateTask as CreateTask,
     type DeleteTaskResponse as DeleteTaskResponse,
     type Task as Task,
-    type TaskWithTurns as TaskWithTurns,
+    type TaskTurnList as TaskTurnList,
+    type Turn as Turn,
+    type TaskRetrieveResponse as TaskRetrieveResponse,
     type TaskCreateParams as TaskCreateParams,
   };
 }

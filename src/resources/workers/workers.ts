@@ -264,8 +264,6 @@ export namespace Worker {
   }
 
   export interface Usage {
-    credits?: number;
-
     durationMs?: number;
   }
 }

@@ -35,16 +35,16 @@ export class Tasks extends APIResource {
   }
 
   /**
-   * Retrieve a single task and its individual turns.
+   * Retrieve a single task.
    *
    * @example
    * ```ts
-   * const taskWithTurns = await client.tasks.retrieve(
+   * const task = await client.tasks.retrieve(
    *   'tsk_01HZY31W2SZJ8MJ2FQTR3M1K9D',
    * );
    * ```
    */
-  retrieve(taskID: string, options?: RequestOptions): APIPromise<TaskWithTurns> {
+  retrieve(taskID: string, options?: RequestOptions): APIPromise<TaskRetrieveResponse> {
     return this._client.get(path`/api/tasks/${taskID}`, options);
   }
 
@@ -61,6 +61,20 @@ export class Tasks extends APIResource {
    */
   delete(taskID: string, options?: RequestOptions): APIPromise<DeleteTaskResponse> {
     return this._client.delete(path`/api/tasks/${taskID}`, options);
+  }
+
+  /**
+   * List the individual turns for a task in execution order.
+   *
+   * @example
+   * ```ts
+   * const taskTurnList = await client.tasks.listTurns(
+   *   'tsk_01HZY31W2SZJ8MJ2FQTR3M1K9D',
+   * );
+   * ```
+   */
+  listTurns(taskID: string, options?: RequestOptions): APIPromise<TaskTurnList> {
+    return this._client.get(path`/api/tasks/${taskID}/turns`, options);
   }
 }
 
@@ -133,63 +147,65 @@ export namespace Task {
   }
 }
 
-export interface TaskWithTurns {
-  task: Task;
+export interface TaskTurnList {
+  items: Array<Turn>;
 
-  turns: Array<TaskWithTurns.Turn>;
+  taskId: string;
 }
 
-export namespace TaskWithTurns {
-  export interface Turn {
-    id: string;
+export interface Turn {
+  id: string;
 
-    completedAt: string | null;
+  completedAt: string | null;
 
-    credits: number;
+  credits: number;
 
-    durationMs: number;
+  durationMs: number;
 
-    /**
-     * Files published by this turn.
-     */
-    files: Array<Turn.File>;
+  /**
+   * Files published by this turn.
+   */
+  files: Array<Turn.File>;
 
-    input: string;
+  input: string;
 
-    inputTokens: number;
+  inputTokens: number;
 
-    outputText: string;
+  outputText: string;
 
-    outputTokens: number;
+  outputTokens: number;
 
-    role: string;
+  role: string;
 
-    seq: number;
+  seq: number;
 
-    startedAt: string;
+  startedAt: string;
 
-    status: string;
+  status: string;
 
-    /**
-     * Structured JSON payload when the worker is configured with an output schema.
-     * `null` otherwise.
-     */
-    structuredOutput: { [key: string]: unknown } | null;
+  /**
+   * Structured JSON payload when the worker is configured with an output schema.
+   * `null` otherwise.
+   */
+  structuredOutput: { [key: string]: unknown } | null;
 
-    taskId: string;
+  taskId: string;
+}
+
+export namespace Turn {
+  export interface File {
+    filename: string | null;
+
+    mediaType: string;
+
+    url: string;
+
+    size?: number;
   }
+}
 
-  export namespace Turn {
-    export interface File {
-      filename: string | null;
-
-      mediaType: string;
-
-      url: string;
-
-      size?: number;
-    }
-  }
+export interface TaskRetrieveResponse {
+  task: Task;
 }
 
 export interface TaskCreateParams {
@@ -219,7 +235,9 @@ export declare namespace Tasks {
     type CreateTask as CreateTask,
     type DeleteTaskResponse as DeleteTaskResponse,
     type Task as Task,
-    type TaskWithTurns as TaskWithTurns,
+    type TaskTurnList as TaskTurnList,
+    type Turn as Turn,
+    type TaskRetrieveResponse as TaskRetrieveResponse,
     type TaskCreateParams as TaskCreateParams,
   };
 }
