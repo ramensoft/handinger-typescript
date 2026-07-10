@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.12.1 (2026-07-10)
+
+Full Changelog: [v0.12.0...v0.12.1](https://github.com/ramensoft/handinger-typescript/compare/v0.12.0...v0.12.1)
+
+### Bug Fixes
+
+* **api:** remove credits field from Worker.Usage ([e4fc3ee](https://github.com/ramensoft/handinger-typescript/commit/e4fc3eea2dbf589f2682269eebcdd86a86ef53dd))
+
 ## 0.12.0 (2026-06-23)
 
 Full Changelog: [v0.11.1...v0.12.0](https://github.com/ramensoft/handinger-typescript/compare/v0.11.1...v0.12.0)
