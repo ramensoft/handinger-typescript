@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.13.1 (2026-07-11)
+
+Full Changelog: [v0.13.0...v0.13.1](https://github.com/ramensoft/handinger-typescript/compare/v0.13.0...v0.13.1)
+
+### Bug Fixes
+
+* **ci:** bump @arethetypeswrong/cli to ^0.18.0 and run CI workflows on Node 24 ([dc18ae1](https://github.com/ramensoft/handinger-typescript/commit/dc18ae19b0e419e7d4f6e078dd3afbd0c361663f))
+
 ## 0.13.0 (2026-07-10)
 
 Full Changelog: [v0.12.1...v0.13.0](https://github.com/ramensoft/handinger-typescript/compare/v0.12.1...v0.13.0)
