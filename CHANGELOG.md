@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.14.0 (2026-07-18)
+
+Full Changelog: [v0.13.1...v0.14.0](https://github.com/ramensoft/handinger-typescript/compare/v0.13.1...v0.14.0)
+
+### Features
+
+* **stlc:** configurable CI runner and private-production-repo support in workflow templates ([a7dac38](https://github.com/ramensoft/handinger-typescript/commit/a7dac38ef9ec68ff5350bc9bfe28d91e3e784da3))
+
 ## 0.13.1 (2026-07-11)
 
 Full Changelog: [v0.13.0...v0.13.1](https://github.com/ramensoft/handinger-typescript/compare/v0.13.0...v0.13.1)
